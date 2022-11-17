@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="imagen" width="1080" height="720" style="border: 2px solid blue;"></canvas>
+    <script>
+        var img = document.getElementById("imagen");
+        var ctx = img.getContext("2d");
+
+        var bg = new Image();
+        bg.src = "src/bg.png";
+        bg.onload = function(){
+            ctx.drawImage(bg, 0, 0)
+
+            ctx.font = "80px Britannic Bold";
+            ctx.fillStyle = "white";
+            ctx.fillText("Energía Eólica", 250, 100)
+
+            ctx.font = "40px Comic Sans MS"
+            ctx.fillStyle = "white";
+            ctx.fillText("Esta energía aprovecha , de forma sencilla, la", 160, 200)
+            ctx.fillText("fuerza del viento para para generar electricidad.", 110, 250)
+
+            ctx.font = "40px Comic Sans MS"
+            ctx.fillStyle = "white";
+            ctx.fillText("Además, es inagotable y reduce el uso de", 160, 320)
+            ctx.fillText("conbustibles fósiles.", 110, 370)
+
+            ctx.font = "35px Comic Sans MS"
+            ctx.fillStyle = "white";
+            ctx.fillText("Algunos beneficios:", 110, 440)
+
+            ctx.font = "30px Comic Sans MS"
+            ctx.fillStyle = "white";
+            ctx.fillText("- Es inagotable", 160, 490)
+            ctx.fillText("- No contaminante", 160, 530)
+            ctx.fillText("- Contribuye al desarrollo sostenible", 160, 570)
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
